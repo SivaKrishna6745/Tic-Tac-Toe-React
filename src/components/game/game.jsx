@@ -54,7 +54,7 @@ function Game() {
                 <Cell num={8} className="cell" onClick={handleClick} turn={turn} cells={cells} />
             </div>
             {winner && <Win winner={winner} onPlayAgain={playAgain} />}
-            {(!cells.includes('')) && <Tie onPlayAgain={playAgain} />}
+            {(!winner && !cells.includes('')) && <Tie onPlayAgain={playAgain} />}
         </div>
     );
 }
